@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "vpn-flow-analyst": {
+      "command": "python",
+      "args": [
+        "C:/path/to/vpn-flow-analyst-mcp/src/vpn_flow_analyst_mcp/server.py"
+      ],
+      "cwd": "C:/path/to/vpn-flow-analyst-mcp"
+    }
+  }
+}
+

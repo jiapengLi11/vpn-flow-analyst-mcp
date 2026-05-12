@@ -1,0 +1,8 @@
+flow_id,protocol,responder_port,packet_count,total_bytes,duration_sec,bytes_per_second,packets_per_second,upstream_byte_ratio,packet_balance,avg_packet_size,std_packet_size,max_packet_size,avg_inter_arrival,std_inter_arrival,tcp_syn_count,tcp_ack_count,tcp_fin_count,tcp_rst_count,tcp_psh_count,has_tls_sni,suspicion_score,label
+flow-demo-001,TCP,443,120,98432,42.5,2316.05,2.82,0.48,0.92,820.27,310.45,1514,0.35,0.18,1,118,1,0,66,0,78,encrypted_tunnel
+flow-demo-002,UDP,51820,86,38210,180.0,212.28,0.48,0.52,0.88,444.30,75.20,612,2.11,0.43,0,0,0,0,0,0,86,encrypted_tunnel
+flow-demo-003,TCP,443,64,55210,8.2,6732.93,7.80,0.72,0.31,862.66,480.91,1460,0.12,0.05,1,63,1,0,41,1,18,normal
+flow-demo-004,TCP,8443,320,410112,310.0,1322.94,1.03,0.51,0.97,1281.60,215.44,1514,0.97,0.22,1,318,0,0,204,0,92,encrypted_tunnel
+flow-demo-005,TCP,80,42,28411,3.4,8356.18,12.35,0.83,0.20,676.45,402.12,1500,0.08,0.03,1,41,1,0,22,0,12,normal
+flow-demo-006,UDP,443,210,178920,65.0,2752.62,3.23,0.46,0.90,852.00,260.18,1350,0.31,0.10,0,0,0,0,0,0,71,encrypted_tunnel
+

@@ -1,0 +1,4 @@
+display_name: VPN Flow Analyst
+short_description: Analyze VPN/proxy flow evidence with MCP tools.
+default_prompt: Analyze this VPN/proxy flow or batch result using tool evidence, retrieved knowledge, and concise triage guidance.
+

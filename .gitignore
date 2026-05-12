@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.env
+
+# Keep the public repo free of private captures and generated artifacts.
+*.pcap
+*.pcapng
+*.docx
+*.pdf
+*.joblib
+*.bin
+*.pt
+*.pth
+*.ckpt
+output/
+dist/
+build/
+
