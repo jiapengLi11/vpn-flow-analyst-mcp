@@ -71,4 +71,4 @@ This repository is intentionally sanitized:
 
 ## Resume Wording
 
-`将商用 VPN/代理流量检测结果抽象为 MCP 工具与 Codex Skill，提供 flow 查询、风险解释、知识检索和研判报告生成能力，并使用脱敏样例数据完成独立环境测试，使检测结果可被大模型/Agent 以工具调用方式复用。`
+`将VPN流量检测抽象为 MCP 工具与 Codex Skill，提供 flow 查询、风险解释、知识检索和研判报告生成能力，并使用脱敏样例数据完成独立环境测试，使检测结果可被大模型/Agent 以工具调用方式复用。`
