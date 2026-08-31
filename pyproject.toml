@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vpn-flow-analyst-mcp"
+version = "0.2.0"
+description = "Evidence-oriented MCP tools and a Codex skill for VPN/proxy flow triage."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Jiapeng Li" }]
+dependencies = [
+  "mcp>=1.2.0",
+  "pandas>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+vpn-flow-analyst = "vpn_flow_analyst_mcp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

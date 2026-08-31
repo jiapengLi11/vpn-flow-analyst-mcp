@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -16,10 +17,12 @@ KNOWLEDGE_PATH = DATA_DIR / "vpn_knowledge.jsonl"
 mcp = FastMCP("vpn-flow-analyst")
 
 
+@lru_cache(maxsize=1)
 def load_flows() -> pd.DataFrame:
     return pd.read_csv(FLOW_PATH)
 
 
+@lru_cache(maxsize=1)
 def load_knowledge() -> List[Dict[str, Any]]:
     docs: List[Dict[str, Any]] = []
     for line in KNOWLEDGE_PATH.read_text(encoding="utf-8").splitlines():
@@ -145,7 +148,7 @@ def generate_flow_report(flow_id: str) -> Dict[str, Any]:
     analysis = analyze_flow(flow_id)
     if not analysis.get("found"):
         return analysis
-    query = " ".join(analysis.get("hit_features", [])) or "vpn flow triage"
+    query = " ".join(feature.replace("_", " ") for feature in analysis.get("hit_features", [])) or "vpn flow triage"
     knowledge = search_vpn_knowledge(query, limit=3)
     markdown = [
         f"# Flow Triage Report: {flow_id}",
@@ -199,4 +202,3 @@ def summarize_flows(min_risk_score: int = 70, limit: int = 10) -> Dict[str, Any]
 
 if __name__ == "__main__":
     mcp.run()
-

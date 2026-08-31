@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">VPN Flow Analyst MCP architecture</title>
+  <desc id="desc">A four-stage evidence-oriented flow from synthetic flow features and knowledge to MCP tools, agent reasoning, and an auditable report.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081a22"/><stop offset="1" stop-color="#102c2d"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity=".24"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#63d7b2"/></marker>
+  </defs>
+  <rect width="1200" height="380" rx="28" fill="url(#bg)"/>
+  <text x="60" y="62" fill="#eaf7f2" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700">Evidence-oriented VPN / Proxy Flow Triage</text>
+  <text x="60" y="92" fill="#8db3aa" font-family="Segoe UI, sans-serif" font-size="16">Synthetic public data, deterministic scoring, MCP tool contracts, and explicit uncertainty.</text>
+  <g font-family="Segoe UI, sans-serif" filter="url(#shadow)">
+    <g transform="translate(55 135)"><rect width="235" height="155" rx="18" fill="#173b3a" stroke="#2c6b61"/><text x="24" y="38" fill="#73e0bd" font-size="14" font-weight="700">01 · EVIDENCE</text><text x="24" y="72" fill="white" font-size="20" font-weight="700">Flow features</text><text x="24" y="104" fill="#b9cfca" font-size="14">duration · port · SNI</text><text x="24" y="128" fill="#b9cfca" font-size="14">packet balance · score</text></g>
+    <g transform="translate(345 135)"><rect width="235" height="155" rx="18" fill="#173b3a" stroke="#2c6b61"/><text x="24" y="38" fill="#73e0bd" font-size="14" font-weight="700">02 · TOOLS</text><text x="24" y="72" fill="white" font-size="20" font-weight="700">FastMCP server</text><text x="24" y="104" fill="#b9cfca" font-size="14">search · analyze</text><text x="24" y="128" fill="#b9cfca" font-size="14">summarize · report</text></g>
+    <g transform="translate(635 135)"><rect width="235" height="155" rx="18" fill="#173b3a" stroke="#2c6b61"/><text x="24" y="38" fill="#73e0bd" font-size="14" font-weight="700">03 · REASONING</text><text x="24" y="72" fill="white" font-size="20" font-weight="700">Codex skill</text><text x="24" y="104" fill="#b9cfca" font-size="14">evidence + knowledge</text><text x="24" y="128" fill="#b9cfca" font-size="14">false-positive checks</text></g>
+    <g transform="translate(925 135)"><rect width="220" height="155" rx="18" fill="#3d3420" stroke="#d8a740"/><text x="24" y="38" fill="#f4c55d" font-size="14" font-weight="700">04 · OUTPUT</text><text x="24" y="72" fill="white" font-size="20" font-weight="700">Triage report</text><text x="24" y="104" fill="#d8cdb5" font-size="14">risk · evidence</text><text x="24" y="128" fill="#d8cdb5" font-size="14">uncertainty · action</text></g>
+  </g>
+  <path d="M295 212 H337" stroke="#63d7b2" stroke-width="3" marker-end="url(#arrow)"/><path d="M585 212 H627" stroke="#63d7b2" stroke-width="3" marker-end="url(#arrow)"/><path d="M875 212 H917" stroke="#63d7b2" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="60" y="338" fill="#89a69f" font-family="Segoe UI, sans-serif" font-size="14">Boundary: statistical flow evidence supports triage; it does not decrypt payloads or prove exact VPN attribution.</text>
+</svg>

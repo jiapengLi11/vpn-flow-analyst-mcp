@@ -24,13 +24,30 @@ def test_direct_tools() -> None:
 
     report = server.generate_flow_report("flow-demo-002")
     assert "Flow Triage Report" in report["markdown"]
+    assert report["knowledge_matches"]
 
     summary = server.summarize_flows(min_risk_score=70)
     assert summary["count"] >= 1
 
 
-async def test_fastmcp_tool_registry() -> None:
-    tools = await server.mcp.list_tools()
+def test_missing_flow_is_explicit() -> None:
+    result = server.analyze_flow("missing-flow")
+    assert result == {
+        "flow_id": "missing-flow",
+        "found": False,
+        "message": "flow_id not found",
+    }
+
+
+def test_risk_threshold_boundaries() -> None:
+    assert server.risk_level(59) == "low"
+    assert server.risk_level(60) == "medium"
+    assert server.risk_level(79) == "medium"
+    assert server.risk_level(80) == "high"
+
+
+def test_fastmcp_tool_registry() -> None:
+    tools = asyncio.run(server.mcp.list_tools())
     tool_names = {tool.name for tool in tools}
     assert {
         "search_vpn_knowledge",
@@ -55,4 +72,3 @@ if __name__ == "__main__":
     asyncio.run(test_fastmcp_tool_registry())
     test_skill_files()
     print("smoke tests passed")
-
